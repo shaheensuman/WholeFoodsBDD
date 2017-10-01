@@ -23,7 +23,8 @@ public class HooksAllBase extends StepBase {
     }
     @After
     public void tearDown(){
-
+       // driver.close();
+       // driver.quit();
         DriverFactory.getInstance().removeDriver();
     }
 }
