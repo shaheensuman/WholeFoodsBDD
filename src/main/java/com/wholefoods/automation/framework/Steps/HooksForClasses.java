@@ -14,22 +14,24 @@ import static com.wholefoods.automation.framework.Steps.WebdriverProvider.driver
 /**
  * Created by jahangir shaheen on 10/1/2017.
  */
-public class HooksForClasses extends WebdriverProvider {
-    WebDriver  driver=getDriver();
+public class HooksForClasses extends StepBase {
+    //  WebDriver driver=getDriver(); if HooksForClasses extends WebdriverProvider
 
     @Before
     public void setUp(){
-        //ChromeDriverManager.getInstance().setup();
-       // driver=new ChromeDriver();
-       // driver= DriverFactory.getInstance().getDriver();
+       /* ChromeDriverManager.getInstance().setup();
+        driver=new ChromeDriver();
+        driver= DriverFactory.getInstance().getDriver();
+        */
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
     }
     @After
     public void tearDown(){
-        driver.close();
-         driver.quit();
-        //DriverFactory.getInstance().removeDriver();
+       /* driver.close();
+        driver.quit();
+        */
+        DriverFactory.getInstance().removeDriver();
     }
 }

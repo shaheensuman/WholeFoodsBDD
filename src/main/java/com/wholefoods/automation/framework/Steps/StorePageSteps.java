@@ -13,9 +13,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by jahangir shaheen on 9/30/2017.
  */
-public class StorePageSteps extends WebdriverProvider{
-    WebDriver driver=getDriver();
+public class StorePageSteps extends StepBase{
 
+    //  WebDriver driver=getDriver(); if StorePageSteps  extends WebdriverProvider
 
     @When("^click on \"([^\"]*)\" link$")
     public void click_on_link(String arg1) throws Throwable {
