@@ -19,7 +19,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by jahangir shaheen on 9/30/2017.
  */
-public class HomePageSteps extends StepBase {
+public class HomePageSteps extends WebdriverProvider {
+    WebDriver driver=getDriver();
 
 
     @Given("^as not valid user$")

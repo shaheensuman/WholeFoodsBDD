@@ -13,7 +13,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by jahangir shaheen on 9/30/2017.
  */
-public class StorePageSteps extends StepBase{
+public class StorePageSteps extends WebdriverProvider{
+    WebDriver driver=getDriver();
 
 
     @When("^click on \"([^\"]*)\" link$")
